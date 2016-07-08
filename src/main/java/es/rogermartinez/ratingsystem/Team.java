@@ -6,6 +6,5 @@ import java.util.List;
  * Created by roger on 10/6/16.
  */
 public interface Team {
-    List<Player> getPlayers();
     float getScore();
 }

@@ -2,12 +2,9 @@ package es.rogermartinez.ratingsystem.impl;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.mockito.InjectMocks;
 
 import java.util.List;
 
-import es.rogermartinez.ratingsystem.Player;
-import es.rogermartinez.ratingsystem.RatingSystem;
 import es.rogermartinez.ratingsystem.Team;
 
 /**
@@ -22,7 +19,7 @@ public class ELORatingSystemTest {
         Team team1 = createTeamWith1000Score();
         Team team2 = createTeamWith1000Score();
 
-        double score = eloRatingSystem.calculateRating(team1, team2);
+        double score = eloRatingSystem.calculateEstimateRating(team1, team2);
 
 
         Assert.assertEquals(score, 0.5d, 0);
